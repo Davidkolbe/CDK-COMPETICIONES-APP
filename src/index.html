@@ -106,7 +106,7 @@
         <span aria-hidden="true">·</span>
         <a href="#" data-action="open-web">Web</a>
       </div>
-      <p class="version">v1.0.0</p>
+      <p class="version">v1.1.0</p>
     </footer>
   </main>
 
@@ -115,21 +115,17 @@
     <span>Sin conexion</span>
   </div>
 
-  <!-- MODAL SELECCION EQUIPO -->
+  <!-- MODAL WIZARD ELEGIR EQUIPO (3 pasos) -->
   <div class="modal" id="teamModal" hidden>
     <div class="modal-backdrop" data-close-modal></div>
     <div class="modal-content">
       <header class="modal-header">
-        <h3>Elige tu equipo</h3>
-        <button class="modal-close" data-close-modal aria-label="Cerrar">×</button>
+        <button class="modal-back" id="wizardBack" aria-label="Atras" hidden>&lsaquo;</button>
+        <h3 id="wizardTitle">Elige tu equipo</h3>
+        <button class="modal-close" data-close-modal aria-label="Cerrar">&times;</button>
       </header>
-      <div class="modal-body">
-        <p class="modal-help">Selecciona el equipo de tu hijo/a para acceder rapido a su calendario y resultados.</p>
-        <input type="search" id="teamSearch" placeholder="Buscar equipo (ej: CD KOLBE BLANCO)" />
-        <ul class="team-list" id="teamList">
-          <!-- se rellena con app.js -->
-        </ul>
-        <p class="modal-footer-note">No encuentras tu equipo? Toca <strong>Competiciones</strong> y navega por la lista completa.</p>
+      <div class="modal-body" id="wizardBody">
+        <!-- contenido inyectado por app.js segun el paso -->
       </div>
     </div>
   </div>

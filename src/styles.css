@@ -411,3 +411,113 @@ section h2 {
   margin-top: 14px;
   text-align: center;
 }
+
+/* === WIZARD (3 pasos) === */
+.modal-back {
+  background: none;
+  border: none;
+  font-size: 32px;
+  line-height: 1;
+  color: var(--color-primary);
+  cursor: pointer;
+  padding: 0 6px;
+  margin-right: 6px;
+  font-weight: 700;
+}
+.modal-back:active { opacity: 0.6; }
+
+.wizard-help {
+  font-size: 14px;
+  color: var(--color-text-muted);
+  margin: 0 0 18px;
+}
+
+.wizard-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.wizard-card {
+  background: var(--color-card);
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 20px 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-text);
+  transition: all 0.15s;
+}
+
+.wizard-card:active {
+  transform: scale(0.96);
+  border-color: var(--color-primary);
+  background: rgba(11, 171, 0, 0.06);
+}
+
+.wizard-card-icon {
+  width: 48px;
+  height: 48px;
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
+  color: white;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 15px;
+}
+
+.wizard-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.wizard-list li {
+  padding: 16px 14px;
+  border-bottom: 1px solid var(--color-border);
+  cursor: pointer;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: background 0.1s;
+}
+
+.wizard-list li:last-child { border-bottom: none; }
+.wizard-list li:active { background: var(--color-bg); }
+.wizard-list li.muted { color: var(--color-text-muted); justify-content: center; font-style: italic; }
+
+.wizard-list .chev {
+  color: var(--color-primary);
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.wizard-fallback {
+  margin-top: 14px;
+  width: 100%;
+}
+
+#wizardBody input[type="search"] {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1.5px solid var(--color-border);
+  border-radius: 12px;
+  font-size: 15px;
+  margin-bottom: 14px;
+  font-family: inherit;
+  -webkit-appearance: none;
+}
+#wizardBody input[type="search"]:focus {
+  outline: none;
+  border-color: var(--color-primary);
+}
