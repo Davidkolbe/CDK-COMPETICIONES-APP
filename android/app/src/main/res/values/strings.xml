@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">CD Kolbe</string>
+    <string name="title_activity_main">CD Kolbe</string>
+    <string name="package_name">com.clubdeportivokolbe.competiciones</string>
+    <string name="custom_url_scheme">cdk-competiciones</string>
+</resources>

@@ -1,0 +1,36 @@
+# Node
+node_modules/
+npm-debug.log*
+
+# Capacitor build outputs
+www/
+android/app/build/
+android/build/
+android/.gradle/
+android/local.properties
+android/app/release/
+ios/App/build/
+ios/App/Pods/
+ios/App/output/
+
+# Keystore (NUNCA subir)
+*.jks
+*.keystore
+android/keystore.properties
+
+# IDE
+.vscode/
+.idea/
+*.iml
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs y temporales
+*.log
+.cache/
+
+# Estos sí queremos en el repo:
+!assets/
+!resources/

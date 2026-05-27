@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=no" />
+  <meta name="theme-color" content="#0BAB00" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="format-detection" content="telephone=no" />
+  <title>CD Kolbe Competiciones</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main id="app">
+    <!-- HEADER CDK -->
+    <header class="header">
+      <div class="header-content">
+        <div class="logo">
+          <div class="logo-shield" aria-hidden="true">
+            <span>K</span>
+          </div>
+          <div class="logo-text">
+            <h1>CD KOLBE</h1>
+            <span class="subtitle">Competiciones</span>
+          </div>
+        </div>
+        <button class="btn-refresh" id="btnRefresh" aria-label="Actualizar">
+          <svg viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M17.65 6.35A7.95 7.95 0 0 0 12 4a8 8 0 1 0 7.73 10h-2.08A6 6 0 1 1 12 6c1.66 0 3.14.69 4.22 1.78L13 11h7V4l-2.35 2.35z"/></svg>
+        </button>
+      </div>
+    </header>
+
+    <!-- MI EQUIPO -->
+    <section class="my-team-section" id="myTeamSection">
+      <div class="my-team-header">
+        <h2>Mi equipo</h2>
+        <button class="btn-link" id="btnChangeTeam">Cambiar</button>
+      </div>
+      <div class="my-team-card" id="myTeamCard">
+        <div class="empty-state">
+          <p>Aun no has elegido tu equipo</p>
+          <button class="btn-primary" id="btnSelectTeam">Elegir mi equipo</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ACCESO RAPIDO -->
+    <section class="quick-access">
+      <h2>Acceso rapido</h2>
+      <div class="grid">
+        <button class="card" data-action="competitions">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" width="32" height="32"><path fill="currentColor" d="M7 4V2h10v2h3v3a4 4 0 0 1-4 4 5 5 0 0 1-3 4.9V18h3v2H8v-2h3v-2.1A5 5 0 0 1 8 11a4 4 0 0 1-4-4V4h3zM6 6v1a2 2 0 0 0 2 2V6H6zm12 0v3a2 2 0 0 0 2-2V6h-2z"/></svg>
+          </div>
+          <span>Competiciones</span>
+        </button>
+        <button class="card" data-action="calendar">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" width="32" height="32"><path fill="currentColor" d="M19 3h-1V1h-2v2H8V1H6v2H5a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2zm0 18H5V8h14v13z"/></svg>
+          </div>
+          <span>Calendario</span>
+        </button>
+        <button class="card" data-action="standings">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" width="32" height="32"><path fill="currentColor" d="M16 11V3H8v6H2v12h20V11h-6zM10 5h4v14h-4V5zm-6 6h4v8H4v-8zm16 8h-4v-6h4v6z"/></svg>
+          </div>
+          <span>Clasificaciones</span>
+        </button>
+        <button class="card" data-action="news">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" width="32" height="32"><path fill="currentColor" d="M20 3H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2zM7 17H5v-2h2v2zm0-4H5v-2h2v2zm0-4H5V7h2v2zm7 8H9v-2h5v2zm5-4H9v-2h10v2zm0-4H9V7h10v2z"/></svg>
+          </div>
+          <span>Noticias</span>
+        </button>
+        <button class="card" data-action="campus">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" width="32" height="32"><path fill="currentColor" d="M12 3 1 9l4 2.18v6L12 21l7-3.82v-6l2-1.09V17h2V9L12 3zm6.82 6L12 12.72 5.18 9 12 5.28 18.82 9zM17 15.99l-5 2.73-5-2.73v-3.72L12 15l5-2.73v3.72z"/></svg>
+          </div>
+          <span>Campus</span>
+        </button>
+        <button class="card" data-action="info">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" width="32" height="32"><path fill="currentColor" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+          </div>
+          <span>Informacion</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- PROXIMOS PARTIDOS (placeholder, se rellenara con feed) -->
+    <section class="upcoming-section">
+      <h2>Proximos partidos</h2>
+      <div class="upcoming-card" id="upcomingCard">
+        <p class="muted">Toca <strong>Calendario</strong> para ver los proximos partidos de todas las competiciones.</p>
+        <button class="btn-secondary" data-action="calendar">Ver calendario</button>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <p class="footer-text">CD Kolbe — Deporte Infantil C. Madrid Area 16</p>
+      <div class="footer-links">
+        <a href="#" data-action="open-fb" aria-label="Facebook">Facebook</a>
+        <span aria-hidden="true">·</span>
+        <a href="#" data-action="open-ig" aria-label="Instagram">Instagram</a>
+        <span aria-hidden="true">·</span>
+        <a href="#" data-action="open-web">Web</a>
+      </div>
+      <p class="version">v1.0.0</p>
+    </footer>
+  </main>
+
+  <!-- OFFLINE BANNER -->
+  <div class="offline-banner" id="offlineBanner" hidden>
+    <span>Sin conexion</span>
+  </div>
+
+  <!-- MODAL SELECCION EQUIPO -->
+  <div class="modal" id="teamModal" hidden>
+    <div class="modal-backdrop" data-close-modal></div>
+    <div class="modal-content">
+      <header class="modal-header">
+        <h3>Elige tu equipo</h3>
+        <button class="modal-close" data-close-modal aria-label="Cerrar">×</button>
+      </header>
+      <div class="modal-body">
+        <p class="modal-help">Selecciona el equipo de tu hijo/a para acceder rapido a su calendario y resultados.</p>
+        <input type="search" id="teamSearch" placeholder="Buscar equipo (ej: CD KOLBE BLANCO)" />
+        <ul class="team-list" id="teamList">
+          <!-- se rellena con app.js -->
+        </ul>
+        <p class="modal-footer-note">No encuentras tu equipo? Toca <strong>Competiciones</strong> y navega por la lista completa.</p>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>

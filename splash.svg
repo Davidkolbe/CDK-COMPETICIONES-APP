@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2732 2732">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0BAB00"/>
+      <stop offset="100%" stop-color="#089400"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="20" stdDeviation="30" flood-opacity="0.22"/>
+    </filter>
+  </defs>
+  <rect width="2732" height="2732" fill="url(#bg)"/>
+  <!-- Escudo centrado -->
+  <g transform="translate(1366 1366) scale(1.6) translate(-512 -512)" filter="url(#shadow)">
+    <path d="M 512 180
+             L 760 280
+             L 760 540
+             Q 760 720 512 850
+             Q 264 720 264 540
+             L 264 280
+             Z"
+          fill="white"/>
+    <text x="512" y="610"
+          font-family="Georgia, serif"
+          font-size="380"
+          font-weight="900"
+          text-anchor="middle"
+          fill="#0BAB00">K</text>
+  </g>
+  <!-- Titulo CD KOLBE debajo -->
+  <text x="1366" y="2350"
+        font-family="-apple-system, sans-serif"
+        font-size="120"
+        font-weight="800"
+        text-anchor="middle"
+        fill="white"
+        letter-spacing="14">CD KOLBE</text>
+  <text x="1366" y="2470"
+        font-family="-apple-system, sans-serif"
+        font-size="60"
+        font-weight="500"
+        text-anchor="middle"
+        fill="rgba(255,255,255,0.85)"
+        letter-spacing="6">COMPETICIONES</text>
+</svg>

@@ -1,0 +1,30 @@
+{
+  "name": "cdk-competiciones",
+  "version": "1.0.0",
+  "description": "App movil de Competiciones del Club Deportivo Kolbe",
+  "scripts": {
+    "build": "echo 'No build step needed - static assets' && cp -r src/* www/ 2>/dev/null || true",
+    "sync": "npm run build && cap sync",
+    "android": "npm run sync && cap open android",
+    "ios": "npm run sync && cap open ios"
+  },
+  "author": "Club Deportivo Kolbe",
+  "license": "MIT",
+  "dependencies": {
+    "@capacitor/android": "^8.3.4",
+    "@capacitor/app": "^8.1.0",
+    "@capacitor/browser": "^8.0.3",
+    "@capacitor/core": "^8.3.4",
+    "@capacitor/ios": "^8.3.4",
+    "@capacitor/network": "^8.0.1",
+    "@capacitor/preferences": "^8.0.1",
+    "@capacitor/push-notifications": "^8.1.1",
+    "@capacitor/share": "^8.0.1",
+    "@capacitor/splash-screen": "^8.0.1",
+    "@capacitor/status-bar": "^8.0.2"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "^8.3.4",
+    "typescript": "^6.0.3"
+  }
+}
